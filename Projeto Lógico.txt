@@ -1,0 +1,53 @@
+categoria_Alimento (
+  ID[PK],
+  descricao
+)
+
+
+alimento (
+  ID[PK]
+  nome,
+  id_categoria_alimento[FK]
+)
+
+
+nutrientes (
+  ID[PK],
+  quantidade,
+  descricao,
+  id_alimento[FK],
+  id_categoria_nutriente[FK]
+)
+
+
+categoria_nutriente (
+  ID[PK],
+  descricao
+)
+
+
+refeicao (
+  ID(PK),
+  descricao,
+  horario,
+  id_dieta[FK]
+)
+
+
+dieta (
+  ID(PK),
+  descricao,
+  data_inicio,
+  data_fim
+)
+
+
+alimento_refeicao_assoc (
+  id_alimento[FK],
+  id_refeicao[FK]
+)
+
+
+
+
+	
