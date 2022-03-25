@@ -3,43 +3,55 @@ categoria_Alimento (
   descricao
 )
 
-
-alimento (
-  ID[PK]
-  nome,
-  id_categoria_alimento[FK]
-)
-
-
-nutrientes (
-  ID[PK],
-  quantidade,
-  descricao,
-  id_alimento[FK],
-  id_categoria_nutriente[FK]
-)
-
-
 categoria_nutriente (
   ID[PK],
   descricao
 )
 
-
-refeicao (
-  ID(PK),
+nutrientes (
+  ID[PK],
+  quantidade,
   descricao,
-  horario,
-  id_dieta[FK]
+  id_alimento[FK]
 )
 
 
+alimento (
+  ID[PK]
+  nome,
+  porcao,
+  id_categoria_alimento[FK],
+  id_categoria_nutrientes[FK]
+)
+
 dieta (
-  ID(PK),
+  ID[PK],
   descricao,
   data_inicio,
   data_fim
 )
+
+
+
+refeicao (
+  ID[PK],
+  descricao,
+  horario,
+  data_inicio,
+  data_fim,
+  id_dieta[FK],
+  id_alimento[FK]	
+)
+
+paciente (
+  ID[PK],
+  nome,
+  data_nasc,
+  sexo,
+  altura,
+  peso
+)
+
 
 
 alimento_refeicao_assoc (
